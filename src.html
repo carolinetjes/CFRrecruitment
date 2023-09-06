@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>src package &mdash; Modeling CFR Impact  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="src" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Modeling CFR Impact
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">src</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">src package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-src.instance">src.instance module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#instance-py">instance.py</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-src.optimization_a_la_evaluate">src.optimization_a_la_evaluate module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#optimization-a-la-evaluate-py">optimization_a_la_evaluate.py</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-src.optimization_profile_time">src.optimization_profile_time module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#optimization-profile-time-py">optimization_profile_time.py</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-src">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Modeling CFR Impact</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">src</a></li>
+      <li class="breadcrumb-item active">src package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/src.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="src-package">
+<h1>src package<a class="headerlink" href="#src-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-src.instance">
+<span id="src-instance-module"></span><h2>src.instance module<a class="headerlink" href="#module-src.instance" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="instance-py">
+<h3>instance.py<a class="headerlink" href="#instance-py" title="Permalink to this headline">¶</a></h3>
+<p>Module that used to read inputFiles and store information of a problen instance.</p>
+<dl class="py class">
+<dt id="src.instance.Instance">
+<em class="property">class </em><code class="sig-prename descclassname">src.instance.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pop_dir</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">travelA_dir</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">nVolunteers</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">volResDelay</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">volWalkingSpeed</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">nBases</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">ambuResDelay</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">ambuBusyProb</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">ambuDist</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">threshold</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">maxDispatchDistance</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">nSteps</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.instance.Instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Read input files and store information of a problen instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pop_dir</strong> (<em>str</em>) – Path of input population file for the region of interest.</p></li>
+<li><p><strong>travelA_dir</strong> (<em>str</em>) – Path of the file that stores ambulance travel time information.</p></li>
+<li><p><strong>nVolunteers</strong> (<em>int</em>) – Number of volunteers.</p></li>
+<li><p><strong>volResDelay</strong> (<em>float</em>) – Volunteer response time delay in seconds from patient collapse.</p></li>
+<li><p><strong>volWalkingSpeed</strong> (<em>float</em>) – Volunteer constance walking speed.</p></li>
+<li><p><strong>nBases</strong> (<em>int</em>) – Number of ambulance bases.</p></li>
+<li><p><strong>ambuResDelay</strong> (<em>float</em>) – Ambulance response time delay in seconds from patient collapse.</p></li>
+<li><p><strong>ambuBusyProb</strong> (<em>float</em>) – Probability that an ambulance will be busy at time of the call.</p></li>
+<li><p><strong>ambuDist</strong> (<em>list</em>) – Ambulance distribution over the set of bases.</p></li>
+<li><p><strong>threshold</strong> (<em>float</em>) – Response time target.</p></li>
+<li><p><strong>maxDispatchDistance</strong> (<em>float</em>) – Dispatch radius in kilometer within which volunteers will be alerted.</p></li>
+<li><p><strong>nSteps</strong> (<em>int</em>) – Number of steps in greedy algorithm.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="src.instance.Instance.nVolunteers">
+<code class="sig-name descname">nVolunteers</code><a class="headerlink" href="#src.instance.Instance.nVolunteers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of volunteers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.instance.Instance.volResDelay">
+<code class="sig-name descname">volResDelay</code><a class="headerlink" href="#src.instance.Instance.volResDelay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Volunteer response time delay in seconds from patient collapse.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.instance.Instance.volWalkingSpeed">
+<code class="sig-name descname">volWalkingSpeed</code><a class="headerlink" href="#src.instance.Instance.volWalkingSpeed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Volunteer constance walking speed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.instance.Instance.nBases">
+<code class="sig-name descname">nBases</code><a class="headerlink" href="#src.instance.Instance.nBases" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of ambulance bases.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.instance.Instance.ambuResDelay">
+<code class="sig-name descname">ambuResDelay</code><a class="headerlink" href="#src.instance.Instance.ambuResDelay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ambulance response time delay in seconds from patient collapse.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.instance.Instance.ambuBusyProb">
+<code class="sig-name descname">ambuBusyProb</code><a class="headerlink" href="#src.instance.Instance.ambuBusyProb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Probability that an ambulance will be busy at time of the call.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.instance.Instance.ambuDist">
+<code class="sig-name descname">ambuDist</code><a class="headerlink" href="#src.instance.Instance.ambuDist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ambulance distribution over the set of bases.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.instance.Instance.threshold">
+<code class="sig-name descname">threshold</code><a class="headerlink" href="#src.instance.Instance.threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Response time target.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.instance.Instance.maxDispatchDistance">
+<code class="sig-name descname">maxDispatchDistance</code><a class="headerlink" href="#src.instance.Instance.maxDispatchDistance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispatch radius in kilometer within which volunteers will be alerted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.instance.Instance.nSteps">
+<code class="sig-name descname">nSteps</code><a class="headerlink" href="#src.instance.Instance.nSteps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of steps in greedy algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.instance.Instance.nLocations">
+<code class="sig-name descname">nLocations</code><a class="headerlink" href="#src.instance.Instance.nLocations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of locations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.instance.Instance.postalCode">
+<code class="sig-name descname">postalCode</code><a class="headerlink" href="#src.instance.Instance.postalCode" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of area unit code for each region.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.instance.Instance.population">
+<code class="sig-name descname">population</code><a class="headerlink" href="#src.instance.Instance.population" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of population for each region.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.instance.Instance.area">
+<code class="sig-name descname">area</code><a class="headerlink" href="#src.instance.Instance.area" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of area for each region.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.instance.Instance.travelTime_A">
+<code class="sig-name descname">travelTime_A</code><a class="headerlink" href="#src.instance.Instance.travelTime_A" title="Permalink to this definition">¶</a></dt>
+<dd><p>Travel time for ambulance from bases to each location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.instance.Instance.readPop">
+<code class="sig-name descname">readPop</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pop</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#src.instance.Instance.readPop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read information from population file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pop</strong> (<em>str</em>) – Path of input population file for the region of interest.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.instance.Instance.readTravel">
+<code class="sig-name descname">readTravel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">travel_A</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#src.instance.Instance.readTravel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read travel time information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>travel_A</strong> (<em>str</em>) – Path of the file that stores ambulance travel time information.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-src.optimization_a_la_evaluate">
+<span id="src-optimization-a-la-evaluate-module"></span><h2>src.optimization_a_la_evaluate module<a class="headerlink" href="#module-src.optimization_a_la_evaluate" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="optimization-a-la-evaluate-py">
+<h3>optimization_a_la_evaluate.py<a class="headerlink" href="#optimization-a-la-evaluate-py" title="Permalink to this headline">¶</a></h3>
+<p>Module that used to compute ideal volunteer <strong>location</strong> distribution using
+greedy algorithm without considering profile.</p>
+<dl class="py class">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate">
+<em class="property">class </em><code class="sig-prename descclassname">src.optimization_a_la_evaluate.</code><code class="sig-name descname">OptimizationEvaluate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inst</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#src.instance.Instance" title="src.instance.Instance">src.instance.Instance</a></span></em>, <em class="sig-param"><span class="n">lamb</span><span class="p">:</span> <span class="n">list</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Compute ideal volunteer distribution with differnt evaluation functions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> (<a class="reference internal" href="#src.instance.Instance" title="src.instance.Instance"><em>Instance</em></a>) – An Instance object that contains information read from the Input files.</p></li>
+<li><p><strong>lamb</strong> (<em>list</em>) – Input OHCA demand distribution.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.nVolunteers">
+<code class="sig-name descname">nVolunteers</code><a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.nVolunteers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of volunteers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.volResDelay">
+<code class="sig-name descname">volResDelay</code><a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.volResDelay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Volunteer response time delay in seconds from patient collapse.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.walkingSpeed">
+<code class="sig-name descname">walkingSpeed</code><a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.walkingSpeed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Volunteer constance walking speed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.nBases">
+<code class="sig-name descname">nBases</code><a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.nBases" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of ambulance bases.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.ambuResDelay">
+<code class="sig-name descname">ambuResDelay</code><a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.ambuResDelay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ambulance response time delay in seconds from patient collapse.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.busyProb">
+<code class="sig-name descname">busyProb</code><a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.busyProb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Probability that an ambulance will be busy at time of the call.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.ambus">
+<code class="sig-name descname">ambus</code><a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.ambus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ambulance distribution over the set of bases.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.threshold">
+<code class="sig-name descname">threshold</code><a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Response time target.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.maxDispatchDistance">
+<code class="sig-name descname">maxDispatchDistance</code><a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.maxDispatchDistance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispatch radius in kilometer within which volunteers will be alerted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.nSteps">
+<code class="sig-name descname">nSteps</code><a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.nSteps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of steps in greedy algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.nLocations">
+<code class="sig-name descname">nLocations</code><a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.nLocations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of locations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.population">
+<code class="sig-name descname">population</code><a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.population" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of population for each region.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.area">
+<code class="sig-name descname">area</code><a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.area" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of area for each region.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.travelTime_A">
+<code class="sig-name descname">travelTime_A</code><a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.travelTime_A" title="Permalink to this definition">¶</a></dt>
+<dd><p>Travel time for ambulance from bases to each location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.lambdaL">
+<code class="sig-name descname">lambdaL</code><a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.lambdaL" title="Permalink to this definition">¶</a></dt>
+<dd><p>OHCA demand distribution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.nAmbulances">
+<code class="sig-name descname">nAmbulances</code><a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.nAmbulances" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of ambulances.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.maxDispatchTime">
+<code class="sig-name descname">maxDispatchTime</code><a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.maxDispatchTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Max dispatch radius in time by assuming constant walking speed for
+volunteers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.waalewijnSurvivalMatrix">
+<code class="sig-name descname">waalewijnSurvivalMatrix</code><a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.waalewijnSurvivalMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pre-caculated waalewijn survival with different CPR and EMS time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>numpy.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.AdditionalOnTimeArrivalInLocation">
+<code class="sig-name descname">AdditionalOnTimeArrivalInLocation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nu</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">loc</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">stepsize</span><span class="p">:</span> <span class="n">float</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.AdditionalOnTimeArrivalInLocation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute additional late arrival probability when a small volunteer
+mass is added to the given location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nu</strong> (<em>float</em>) – Original probability that volunteers appear in given location.</p></li>
+<li><p><strong>loc</strong> (<em>int</em>) – Index of location.</p></li>
+<li><p><strong>stepsize</strong> (<em>float</em>) – Additional volunteer mass added.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Difference in late arrival probability.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.AmbuFirstInLocation">
+<code class="sig-name descname">AmbuFirstInLocation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nu</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">loc</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.AmbuFirstInLocation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute probability that ambulance shows up first for a location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nu</strong> (<em>float</em>) – Probability that volunteers appear in given location.</p></li>
+<li><p><strong>loc</strong> (<em>int</em>) – Index of location.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Probability that ambulance reaches patient before volunteer.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.DeMaioSurvivalProb">
+<code class="sig-name descname">DeMaioSurvivalProb</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">responseTimeInSeconds</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.DeMaioSurvivalProb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate probibility of survival (deMaio et al. (2003)).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>responseTimeInSeconds</strong> (<em>int</em>) – The time between patient collapse and ambulance arrival
+measured in seconds.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>survivalProb</strong> – Probibility of survival.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.Greedy_Waalewijn_FixEMS">
+<code class="sig-name descname">Greedy_Waalewijn_FixEMS</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.Greedy_Waalewijn_FixEMS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute volunteer distrubution by optimizing Waalwijn survival rate
+with fixed 13 min ambulance response for each location using greedy
+algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>nu</strong> – A list of optimized volunteer distrubution.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.Greedy_Waalewijn_FixEMS_N">
+<code class="sig-name descname">Greedy_Waalewijn_FixEMS_N</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nVol</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.Greedy_Waalewijn_FixEMS_N" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute optimal volunteer distribution for Waalewijn with fixed EMS
+response with different number of volunteers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nvol</strong> (<em>int</em>) – Alternative number of volunteers.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>nu</strong> – A list of optimized volunteer distrubution.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.Greedy_Waalewijn_model1">
+<code class="sig-name descname">Greedy_Waalewijn_model1</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.Greedy_Waalewijn_model1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute volunteer distrubution by optimizing Waalewijn survival rate
+for each location using greedy algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>nu</strong> – A list of optimized volunteer distrubution.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.Greedy_Waalewijn_model1_N">
+<code class="sig-name descname">Greedy_Waalewijn_model1_N</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nVol</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.Greedy_Waalewijn_model1_N" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute optimal volunteer distribution with different number
+of volunteers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nvol</strong> (<em>int</em>) – Alternative number of volunteers.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>nu</strong> – A list of optimized volunteer distrubution.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.Greedy_deMaio">
+<code class="sig-name descname">Greedy_deMaio</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.Greedy_deMaio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute volunteer distrubution by optimizing deMaio survival rate
+for each location using greedy algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>nu</strong> – A list of optimized volunteer distrubution.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.Greedy_deMaio_N">
+<code class="sig-name descname">Greedy_deMaio_N</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nVol</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.Greedy_deMaio_N" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute optimal volunteer distribution with different number
+of volunteers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nvol</strong> (<em>int</em>) – Alternative number of volunteers.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>nu</strong> – A list of optimized volunteer distrubution.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.Greedy_lateArrival">
+<code class="sig-name descname">Greedy_lateArrival</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.Greedy_lateArrival" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute volunteer distrubution by optimizing late arrival rate
+for each location using greedy algorithm with discretized stepsizes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>nu</strong> – Optimized volunteer distribution.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.Greedy_lateArrival_N">
+<code class="sig-name descname">Greedy_lateArrival_N</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nVol</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.Greedy_lateArrival_N" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute volunteer distrubution with specified number of volunteers by
+optimizing late arrival rate for each location using greedy algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nVol</strong> (<em>int</em>) – Number of volunteers.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>nu</strong> – Optimized volunteer distribution.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.Greedy_lateArrival_exact">
+<code class="sig-name descname">Greedy_lateArrival_exact</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.Greedy_lateArrival_exact" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute volunteer distrubution by optimizing late arrival rate
+for each location using greedy algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>nu</strong> – Optimized volunteer distribution.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.LateArrivalInLocation">
+<code class="sig-name descname">LateArrivalInLocation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nu</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">loc</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.LateArrivalInLocation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute late arrival rate for a location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nu</strong> (<em>float</em>) – Probability that volunteers appear in given location.</p></li>
+<li><p><strong>loc</strong> (<em>int</em>) – Index of location.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Probability that a response time is greater than $  au$.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.ProbNoResponseInLocation">
+<code class="sig-name descname">ProbNoResponseInLocation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nu</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">loc</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.ProbNoResponseInLocation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute probability of no response for a location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nu</strong> (<em>float</em>) – Probability that volunteers appear in given location.</p></li>
+<li><p><strong>loc</strong> (<em>int</em>) – Index of location.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Probability that there is no ambulance or volunteer response.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.SurvivalInLocation_Waalewijn_FixEMS">
+<code class="sig-name descname">SurvivalInLocation_Waalewijn_FixEMS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nu</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">loc</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.SurvivalInLocation_Waalewijn_FixEMS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute Waalewijn survival probability with fixed 13 minutes ambulance
+response time for a location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nu</strong> (<em>float</em>) – Probability that volunteers appear in given location.</p></li>
+<li><p><strong>loc</strong> (<em>int</em>) – Index of location.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Probability of Waalewijn survival with fixed ambulance response.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.SurvivalInLocation_Waalewijn_model1_alternative">
+<code class="sig-name descname">SurvivalInLocation_Waalewijn_model1_alternative</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nu</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">loc</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.SurvivalInLocation_Waalewijn_model1_alternative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute Waalewijn survival probability for a location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nu</strong> (<em>float</em>) – Probability that volunteers appear in given location.</p></li>
+<li><p><strong>loc</strong> (<em>int</em>) – Index of location.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Probability of survival.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.SurvivalInLocation_deMaio_alternative">
+<code class="sig-name descname">SurvivalInLocation_deMaio_alternative</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nu</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">loc</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.SurvivalInLocation_deMaio_alternative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute survival probability for a location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nu</strong> (<em>float</em>) – Probability that volunteers appear in given location.</p></li>
+<li><p><strong>loc</strong> (<em>int</em>) – Index of location.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Probability of survival.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.Survival_Waalewijn_Upper">
+<code class="sig-name descname">Survival_Waalewijn_Upper</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.Survival_Waalewijn_Upper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute upper limit of Waalewijn survival probability with the given
+ambulance distribution and assume no volunteer travel time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Upper limit of Waalewijn survival.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.VolunteerFirstInLocation">
+<code class="sig-name descname">VolunteerFirstInLocation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nu</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">loc</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.VolunteerFirstInLocation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute probability that volunteer shows up first for a location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nu</strong> (<em>float</em>) – Probability that volunteers appear in given location.</p></li>
+<li><p><strong>loc</strong> (<em>int</em>) – Index of location.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Probability that volunteer reaches patient before ambulance.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.WaalewijnNonzeroSurvivalWhenAllAmbusBusy">
+<code class="sig-name descname">WaalewijnNonzeroSurvivalWhenAllAmbusBusy</code><em class="property"> = False</em><a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.WaalewijnNonzeroSurvivalWhenAllAmbusBusy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.Waalewijn_model1">
+<code class="sig-name descname">Waalewijn_model1</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tVOL_in_sec</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">tEMS_in_sec</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.Waalewijn_model1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate probibility of survival (Waalewijn et al. (2001)).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>responseTimeInSeconds</strong> (<em>int</em>) – The time between patient collapse and ambulance arrival
+measured in seconds.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>survivalProb</strong> – Probibility of survival.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.calcWaalewijnSurvivalMatrix">
+<code class="sig-name descname">calcWaalewijnSurvivalMatrix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.calcWaalewijnSurvivalMatrix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.evaluateLateArrival_as_in_java">
+<code class="sig-name descname">evaluateLateArrival_as_in_java</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nu</span><span class="p">:</span> <span class="n">list</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.evaluateLateArrival_as_in_java" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate sum of probability that a response time is greater than $      au$</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nu</strong> (<em>list</em>) – Volunteer location distribution.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>result</strong> – Sum of probability that a response time is greater than $   au$.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.evaluateProbAmbuFirst">
+<code class="sig-name descname">evaluateProbAmbuFirst</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nu</span><span class="p">:</span> <span class="n">list</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.evaluateProbAmbuFirst" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute probability that ambulance shows up first for the whole city.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nu</strong> (<em>list</em>) – Volunteer location distribution.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Probability that ambulance reaches patient before volunteers.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.evaluateProbNoResponse">
+<code class="sig-name descname">evaluateProbNoResponse</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nu</span><span class="p">:</span> <span class="n">list</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.evaluateProbNoResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute probability that there is no response for the whole city.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nu</strong> (<em>list</em>) – Volunteer location distribution.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Probability that there is no volunteer or ambulance response.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.evaluateProbVolFirst">
+<code class="sig-name descname">evaluateProbVolFirst</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nu</span><span class="p">:</span> <span class="n">list</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.evaluateProbVolFirst" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute probability that volunteer shows up first for the whole city.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nu</strong> (<em>list</em>) – Volunteer location distribution.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Probability that volunteer reaches patient before ambulance.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.evaluateWaalewijn_FixEMS_as_in_java">
+<code class="sig-name descname">evaluateWaalewijn_FixEMS_as_in_java</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nu</span><span class="p">:</span> <span class="n">list</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.evaluateWaalewijn_FixEMS_as_in_java" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate sum of Waalwijn survival probability with fixed EMS response
+time (13 minutes).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nu</strong> (<em>list</em>) – Volunteer location distribution.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Sum of Waalewijn survival rate.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.evaluateWaalewijn_model1_as_in_java">
+<code class="sig-name descname">evaluateWaalewijn_model1_as_in_java</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nu</span><span class="p">:</span> <span class="n">list</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.evaluateWaalewijn_model1_as_in_java" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate sum of Waalewijn survival probability.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nu</strong> (<em>list</em>) – Volunteer location distribution.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Sum of survival rate.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_a_la_evaluate.OptimizationEvaluate.evaluatedeMaio_as_in_java">
+<code class="sig-name descname">evaluatedeMaio_as_in_java</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nu</span><span class="p">:</span> <span class="n">list</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#src.optimization_a_la_evaluate.OptimizationEvaluate.evaluatedeMaio_as_in_java" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate sum of deMaio survival probability.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nu</strong> (<em>list</em>) – Volunteer location distribution.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Sum of survival rate.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-src.optimization_profile_time">
+<span id="src-optimization-profile-time-module"></span><h2>src.optimization_profile_time module<a class="headerlink" href="#module-src.optimization_profile_time" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="optimization-profile-time-py">
+<h3>optimization_profile_time.py<a class="headerlink" href="#optimization-profile-time-py" title="Permalink to this headline">¶</a></h3>
+<p>Module that used to compute ideal volunteer recruitment distribution when we
+consider profile with different time segments.</p>
+<dl class="py class">
+<dt id="src.optimization_profile_time.ProfileOptTime">
+<em class="property">class </em><code class="sig-prename descclassname">src.optimization_profile_time.</code><code class="sig-name descname">ProfileOptTime</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inst</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#src.instance.Instance" title="src.instance.Instance">src.instance.Instance</a></span></em>, <em class="sig-param"><span class="n">numTimeSeg</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">alphaL</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">lambdaL</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">OHCAProbL</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">profileL</span><span class="p">:</span> <span class="n">list</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Computes the optimal volunteer recruitment distribution with given
+profile under both coverage and survival probability objectives.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> (<a class="reference internal" href="#src.instance.Instance" title="src.instance.Instance"><em>Instance</em></a>) – An Instance object that contains information read from the Input files.</p></li>
+<li><p><strong>numTimeSeg</strong> (<em>int</em>) – Number of time segments we are considering.</p></li>
+<li><p><strong>alphaL</strong> (<em>list</em>) – A list of volunteer acceptance probability during different time
+segments.</p></li>
+<li><p><strong>lambdaL</strong> (<em>list</em>) – A list of incident distribution during different time segments.</p></li>
+<li><p><strong>OHCAProbL</strong> (<em>list</em>) – A list of probability that OHCA occurs during each time segments.</p></li>
+<li><p><strong>profileL</strong> (<em>list</em>) – List of profiles that indicates where volunteers stays during
+different time segments.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="src.optimization_profile_time.ProfileOptTime.nVolunteers">
+<code class="sig-name descname">nVolunteers</code><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.nVolunteers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of volunteers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_profile_time.ProfileOptTime.volResDelay">
+<code class="sig-name descname">volResDelay</code><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.volResDelay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Volunteer response time delay in seconds from patient collapse.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_profile_time.ProfileOptTime.walkingSpeed">
+<code class="sig-name descname">walkingSpeed</code><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.walkingSpeed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Volunteer constance walking speed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_profile_time.ProfileOptTime.nBases">
+<code class="sig-name descname">nBases</code><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.nBases" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of ambulance bases.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_profile_time.ProfileOptTime.ambuResDelay">
+<code class="sig-name descname">ambuResDelay</code><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.ambuResDelay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ambulance response time delay in seconds from patient collapse.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_profile_time.ProfileOptTime.busyProb">
+<code class="sig-name descname">busyProb</code><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.busyProb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Probability that an ambulance will be busy at time of the call.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_profile_time.ProfileOptTime.ambus">
+<code class="sig-name descname">ambus</code><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.ambus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ambulance distribution over the set of bases.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_profile_time.ProfileOptTime.threshold">
+<code class="sig-name descname">threshold</code><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Response time target.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_profile_time.ProfileOptTime.maxDispatchDistance">
+<code class="sig-name descname">maxDispatchDistance</code><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.maxDispatchDistance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispatch radius in kilometer within which volunteers will be alerted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_profile_time.ProfileOptTime.nSteps">
+<code class="sig-name descname">nSteps</code><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.nSteps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of steps in greedy algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_profile_time.ProfileOptTime.nLocations">
+<code class="sig-name descname">nLocations</code><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.nLocations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of locations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_profile_time.ProfileOptTime.population">
+<code class="sig-name descname">population</code><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.population" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of population for each region.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_profile_time.ProfileOptTime.area">
+<code class="sig-name descname">area</code><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.area" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of area for each region.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_profile_time.ProfileOptTime.travelTime_A">
+<code class="sig-name descname">travelTime_A</code><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.travelTime_A" title="Permalink to this definition">¶</a></dt>
+<dd><p>Travel time for ambulance from bases to each location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_profile_time.ProfileOptTime.numTimeSeg">
+<code class="sig-name descname">numTimeSeg</code><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.numTimeSeg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of time segments we are considering.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_profile_time.ProfileOptTime.alphaL">
+<code class="sig-name descname">alphaL</code><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.alphaL" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of volunteer acceptance probability during different time
+segments.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_profile_time.ProfileOptTime.lambdaL">
+<code class="sig-name descname">lambdaL</code><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.lambdaL" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of incident distribution during different time segments.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_profile_time.ProfileOptTime.OHCAProbL">
+<code class="sig-name descname">OHCAProbL</code><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.OHCAProbL" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of probability that OHCA occurs during each time segments.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_profile_time.ProfileOptTime.profileL">
+<code class="sig-name descname">profileL</code><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.profileL" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of profiles that indicates where volunteers stays during
+different time segments.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_profile_time.ProfileOptTime.nAmbulances">
+<code class="sig-name descname">nAmbulances</code><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.nAmbulances" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of ambulances.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_profile_time.ProfileOptTime.maxDispatchTime">
+<code class="sig-name descname">maxDispatchTime</code><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.maxDispatchTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Max dispatch radius in time by assuming constant walking speed for
+volunteers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="src.optimization_profile_time.ProfileOptTime.A">
+<code class="sig-name descname">A</code><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.A" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of tranpose of profiles.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_profile_time.ProfileOptTime.AdaptiveLineSearch">
+<code class="sig-name descname">AdaptiveLineSearch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">alpha</span></em>, <em class="sig-param"><span class="n">val</span></em>, <em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">g</span></em>, <em class="sig-param"><span class="n">d</span></em>, <em class="sig-param"><span class="n">theta</span><span class="o">=</span><span class="default_value">0.2</span></em>, <em class="sig-param"><span class="n">gamma</span><span class="o">=</span><span class="default_value">0.7</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">method</span><span class="o">=</span><span class="default_value">'d'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.AdaptiveLineSearch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adaptive line search algorithm that determines the step size for
+Frank-Wolfe algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>alpha</strong> (<em>float</em>) – Stepsize obtained from previous iteration.</p></li>
+<li><p><strong>val</strong> (<em>float</em>) – Current objective value.</p></li>
+<li><p><strong>x</strong> (<em>numpy.array</em>) – Current iterate.</p></li>
+<li><p><strong>g</strong> (<em>numpy.array</em>) – Gradient.</p></li>
+<li><p><strong>d</strong> (<em>numpy.array</em>) – Search direction.</p></li>
+<li><p><strong>theta</strong> (<em>float</em><em>, </em><em>default=0.2</em>) – Parameter for adaptive line search algorithm.</p></li>
+<li><p><strong>gamma</strong> (<em>float</em><em>, </em><em>default=0.7</em>) – Parameter for adaptive line search algorithm.</p></li>
+<li><p><strong>verbose</strong> (<em>boolean</em><em>, </em><em>default=False</em>) – A flag indicates whether we want to print information mainly for the
+purpose of debugging.</p></li>
+<li><p><strong>method</strong> (<em>{'l'</em><em>, </em><em>'d'</em><em>, </em><em>'w'</em><em>, </em><em>'w2'}</em><em>, </em><em>default='d'</em>) – Indicate which objective function we are using. ‘l’ - late arrival
+probability, ‘d’ - DeMaio, ‘w’ - Waalewijn, ‘w2’ - Waalewijn with
+fixed EMS response.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>alpha_k</strong> – An appropriate stepsize that satisfies the sufficient decrease
+condition.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_profile_time.ProfileOptTime.DeMaioSurvivalProb">
+<code class="sig-name descname">DeMaioSurvivalProb</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">responseTimeInSeconds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.DeMaioSurvivalProb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate probibility of survival (deMaio et al. (2003)).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>responseTimeInSeconds</strong> (<em>int</em>) – Time from patient collapse to EMS arrival.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>survival</strong> – Survival probability of OHCA patient.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_profile_time.ProfileOptTime.Frankwolfe_LB">
+<code class="sig-name descname">Frankwolfe_LB</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">init_x</span></em>, <em class="sig-param"><span class="n">eps</span><span class="o">=</span><span class="default_value">0.001</span></em>, <em class="sig-param"><span class="n">tol</span><span class="o">=</span><span class="default_value">0.005</span></em>, <em class="sig-param"><span class="n">theta</span><span class="o">=</span><span class="default_value">0.2</span></em>, <em class="sig-param"><span class="n">gamma</span><span class="o">=</span><span class="default_value">0.7</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">method</span><span class="o">=</span><span class="default_value">'d'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.Frankwolfe_LB" title="Permalink to this definition">¶</a></dt>
+<dd><p>A modified version of Away-step Frank-Wolfe algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>init_x</strong> (<em>numpy.array</em>) – An initial value $x_0$.</p></li>
+<li><p><strong>eps</strong> (<em>float</em><em>, </em><em>default=1e-3</em>) – Stopping criteria for gradient.</p></li>
+<li><p><strong>tol</strong> (<em>float</em><em>, </em><em>default=5e-3</em>) – Stopping criteria when objective function gets close enought to
+the lower bound.</p></li>
+<li><p><strong>theta</strong> (<em>float</em><em>, </em><em>default=0.2</em>) – Parameter for adaptive line search algorithm.</p></li>
+<li><p><strong>gamma</strong> (<em>float</em><em>, </em><em>default = 0.7</em>) – Parameters for adaptive line search algorithm.</p></li>
+<li><p><strong>verbose</strong> (<em>boolean</em><em>, </em><em>default=False</em>) – A flag indicates whether we want to print information mainly for the
+purpose of debugging.</p></li>
+<li><p><strong>method</strong> (<em>{'l'</em><em>, </em><em>'d'</em><em>, </em><em>'w'</em><em>, </em><em>'w2'}</em><em>, </em><em>default='d'</em>) – Indicate which objective function we are using. ‘l’ - late arrival
+probability, ‘d’ - DeMaio, ‘w’ - Waalewijn, ‘w2’ - Waalewijn with
+fixed EMS response.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>x</strong> (<em>numpy.array</em>) – Optimal volunteer recruitment distribution.</p></li>
+<li><p><strong>current_iter</strong> (<em>list</em>) – A list of objective values obtained during each iteration of the
+algorithm.</p></li>
+<li><p><strong>lower_bound</strong> (<em>list</em>) – A list of lower bound on objective function that computed during
+each iteration of the algorithm.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_profile_time.ProfileOptTime.Waalewijn_model1">
+<code class="sig-name descname">Waalewijn_model1</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tVOL_in_sec</span></em>, <em class="sig-param"><span class="n">tEMS_in_sec</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.Waalewijn_model1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate probibility of survival (Waalewijn et al. (2001)).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tVOL_in_sec</strong> (<em>int</em>) – Time from patient collapse to Volunteer arrival.</p></li>
+<li><p><strong>tEMS_in_sec</strong> (<em>int</em>) – Time from patient collapse to EMS arrival.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>survival</strong> – Survival probability of OHCA patient.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_profile_time.ProfileOptTime.contDeMiao">
+<code class="sig-name descname">contDeMiao</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nu_L</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.contDeMiao" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the DeMaio survival objective value we want to minimize.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nu_L</strong> (<em>list</em>) – A list of volunteer <strong>location</strong> distribution during different
+time segment.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Negative of DeMaio survival probability.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_profile_time.ProfileOptTime.contWaalewijn">
+<code class="sig-name descname">contWaalewijn</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nu_L</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.contWaalewijn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the Waalewijn survival objective value we want to minimize.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nu_L</strong> (<em>list</em>) – A list of volunteer <strong>location</strong> distribution during different
+time segment.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Negative of Waalewijn survival probability.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_profile_time.ProfileOptTime.contWaalewijn_FixEMS">
+<code class="sig-name descname">contWaalewijn_FixEMS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nu_L</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.contWaalewijn_FixEMS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the survival with fixed EMS response time
+(13 minutes from patient collapse to ambulance arrival) as a function
+of nu.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nu_L</strong> (<em>list</em>) – A list of volunteer <strong>location</strong> distribution during different
+time segment.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Negative of Waalwijn survival probability.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_profile_time.ProfileOptTime.evaluatePDeMaio">
+<code class="sig-name descname">evaluatePDeMaio</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.evaluatePDeMaio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the DeMaio survival probability.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.array</em>) – An array that represents the volunteer <strong>recruitment</strong> distribution.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Survival probability with given recruitment disbution.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_profile_time.ProfileOptTime.evaluatePWaalewijn">
+<code class="sig-name descname">evaluatePWaalewijn</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.evaluatePWaalewijn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the Waalewijn survival probability.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.array</em>) – An array that represents the volunteer <strong>recruitment</strong> distribution.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Survival probability with given recruitment disbution.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_profile_time.ProfileOptTime.evaluatePWaalewijn_FixEMS">
+<code class="sig-name descname">evaluatePWaalewijn_FixEMS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.evaluatePWaalewijn_FixEMS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the survival with fixed EMS response time
+(13 minutes from patient collapse to ambulance arrival).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.array</em>) – An array that represents the volunteer <strong>recruitment</strong> distribution.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Survival probability with given recruitment disbution.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_profile_time.ProfileOptTime.getLowerbound">
+<code class="sig-name descname">getLowerbound</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">D</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.getLowerbound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes a lower bound on the objective value given the cuts generated
+by all the iterates up to date.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>D</strong> (<em>list</em>) – An array that stores all the cuts</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Lower bound on the objective values given all the cuts up to date.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_profile_time.ProfileOptTime.gradientContDeMaio">
+<code class="sig-name descname">gradientContDeMaio</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nu_L</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.gradientContDeMaio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the gradient of DeMaio objective as a function of nu.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nu_L</strong> (<em>list</em>) – A list of volunteer <strong>location</strong> distribution during different
+time segments.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>grad_L</strong> – A list of gradient vector as a function of nu during different
+time segment.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_profile_time.ProfileOptTime.gradientContWaalewijn">
+<code class="sig-name descname">gradientContWaalewijn</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nu_L</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.gradientContWaalewijn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the gradient of Waalewijn objective as a function of nu.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nu_L</strong> (<em>list</em>) – A list of volunteer <strong>location</strong> distribution during different
+time segments.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>grad_L</strong> – A list of gradient vector as a function of nu during different
+time segment.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_profile_time.ProfileOptTime.gradientContWaalewijn_FixEMS">
+<code class="sig-name descname">gradientContWaalewijn_FixEMS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nu_L</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.gradientContWaalewijn_FixEMS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the gradient of survival with fixed EMS response time
+(13 minutes from patient collapse to ambulance arrival) as a function of
+nu.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nu_L</strong> (<em>list</em>) – A list of volunteer <strong>location</strong> distribution during different
+time segments.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>grad_L</strong> – A list of gradient vector as a function of nu during different
+time segment.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_profile_time.ProfileOptTime.gradientLate">
+<code class="sig-name descname">gradientLate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nu_L</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.gradientLate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the gradient of late arrival objective as a function of nu.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nu_L</strong> (<em>list</em>) – A list of volunteer <strong>location</strong> distribution during different
+time segments.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>grad_L</strong> – A list of gradient vector as a function of nu during different time segment.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_profile_time.ProfileOptTime.gradientPDeMaio">
+<code class="sig-name descname">gradientPDeMaio</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.gradientPDeMaio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the gradient of the DeMaio objective function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.array</em>) – An array that represents the volunteer <strong>recruitment</strong> distribution.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Gradient of DeMaio survival objective as a function of x.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_profile_time.ProfileOptTime.gradientPLate">
+<code class="sig-name descname">gradientPLate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.gradientPLate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the gradient of the late arrival objective function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.array</em>) – An array that represents the volunteer <strong>recruitment</strong> distribution.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Gradient of late arrival objective as a function of x.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_profile_time.ProfileOptTime.gradientPWaalewijn">
+<code class="sig-name descname">gradientPWaalewijn</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.gradientPWaalewijn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the gradient of the Waalewijn objective function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.array</em>) – An array that represents the volunteer <strong>recruitment</strong> distribution.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Gradient of Waalewijn survival objective as a function of x.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_profile_time.ProfileOptTime.gradientPWaalewijn_FixEMS">
+<code class="sig-name descname">gradientPWaalewijn_FixEMS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.gradientPWaalewijn_FixEMS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the gradient of the survival with fixed EMS response time
+(13 minutes from patient collapse to ambulance arrival)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.array</em>) – An array that represents the volunteer <strong>recruitment</strong> distribution.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Gradient of Waalewijn survival objective as a function of x.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_profile_time.ProfileOptTime.pDeMaio">
+<code class="sig-name descname">pDeMaio</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.pDeMaio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the negative of DeMaio survival we want to minimize.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.array</em>) – An array that represents the volunteer <strong>recruitment</strong> distribution.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Negative of DeMaio survival probability with given recruitment
+distribution.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_profile_time.ProfileOptTime.pLateArrival">
+<code class="sig-name descname">pLateArrival</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.pLateArrival" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the late arrival probability.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.array</em>) – An array that represents the volunteer <strong>recruitment</strong> distribution.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Late arrival probability with given recruitment distribution.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_profile_time.ProfileOptTime.pWaalewijn">
+<code class="sig-name descname">pWaalewijn</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.pWaalewijn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the negative of Waalewijn survival we want to minimize.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.array</em>) – An array that represents the volunteer <strong>recruitment</strong> distribution.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Negative of Waalewijn survival probability with given recruitment
+distribution.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_profile_time.ProfileOptTime.pWaalewijn_FixEMS">
+<code class="sig-name descname">pWaalewijn_FixEMS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.pWaalewijn_FixEMS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the negative of Waalewijn survival with fixed EMS response time
+(13 minutes from patient collapse to ambulance arrival)  that we want
+to minimize</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.array</em>) – An array that represents the volunteer <strong>recruitment</strong> distribution.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Negative of Waalewijn survival probability with given recruitment
+distribution.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.optimization_profile_time.ProfileOptTime.standard">
+<code class="sig-name descname">standard</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">size</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">index</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; numpy.array<a class="headerlink" href="#src.optimization_profile_time.ProfileOptTime.standard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate standard unit vector with specified size and index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>size</strong> (<em>int</em>) – Size of the output array.</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – Index that needs to have value 1.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>x</strong> – A standard unit vector with specific index being 1.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-src">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="src" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Pieter L. van den Berg, Shane G. Henderson, Caroline J. Jagtenberg, Hemeng Li.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
